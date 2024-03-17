@@ -1,8 +1,12 @@
-import { currentProfile } from "@/lib/current-profile";
-import { db } from "@/lib/db";
 import { ChannelType } from "@prisma/client";
 import { redirect } from "next/navigation";
+
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { currentProfile } from "@/lib/current-profile";
+import { db } from "@/lib/db";
+
 import { ServerHeader } from "./server-headder";
+import { ServerSearch } from "./server-search";
 
 interface ServerSidebarProps {
     serverId : string;
@@ -55,6 +59,11 @@ return (
         server={server}
         role={role}
         />
+        <ScrollArea className=" flex-1 px-3" >
+            <div className=" mt-2">
+                <ServerSearch />
+            </div>
+        </ScrollArea>
     </div>
 )
 }
