@@ -1,6 +1,6 @@
 "use client";
 
-import { FileIcon, X } from "lucide-react";
+import { FileIcon, Filter, X } from "lucide-react";
 import Image from "next/image";
 
 import { UploadDropzone } from "@/lib/uploadthing";
